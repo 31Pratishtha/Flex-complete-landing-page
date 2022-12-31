@@ -1,5 +1,5 @@
 # First-Website-Clone
-Follow the below link...
+Follow this link and do give it a view...
 https://31pratishtha.github.io/First-Website-Clone/index.html
 
 
