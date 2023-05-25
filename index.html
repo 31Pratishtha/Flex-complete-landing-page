@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>First Website Clone</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="media-queries.css">
 </head>
 
 <body>
@@ -23,7 +24,7 @@
             <a href="#" class="company-logo">
                 <img src="./assets/asset 1.png" alt="Company Logo">
             </a>
-            <div class="nav-links">
+            <div class="nav-links" id="nav-links"> 
                 <ul class="flex">
                     <li><a href="#" class="hover-link">Products</a></li>
                     <li><a href="#" class="hover-link">Customers</a></li>
@@ -32,7 +33,10 @@
                     <li><a href="#" class="hover-link secondary-button">Sign in</a></li>
                     <li><a href="#" class="hover-link primary-button">Sign up</a></li>
                 </ul>
-            </div>
+            </div>      
+            <a href="#" class="nav-toggle hover-link" id="nav-toggle">
+                <i class="fa-solid fa-bars"></i>
+            </a>
         </div>
     </nav>
 
@@ -136,7 +140,7 @@
     </section>
     
     <section class="big-feature-section">
-        <div class="container flex big-feature-container" style="flex-direction: row-reverse;">
+        <div class="container flex big-feature-container" id="second-big-feature">
             <div class="feature-image">
                 <img src="./assets/asset 21.png" alt="">
             </div>
@@ -237,30 +241,33 @@
     <!-- subfooter -->
     <div class="subfooter">
         <div class="container flex subfooter-container">
-            <div class="footer-links flex">
-                <a href="#" class="hover-link">Privacy policy</a>
-                <a href="#" class="hover-link">Terms & conditions</a>
-                <a href="#" class="hover-link">Security information</a>
-            </div>
-            <div class="contact-logos flex">
-                <a href="#" class="hover-link">
-                    <img src="./assets/asset 28.png" alt="Facebook">
-                </a>
-                <a href="#" class="hover-link">
-                    <img src="./assets/asset 29.png" alt="Twitter">
-                </a>
-                <a href="#" class="hover-link">
-                    <img src="./assets/asset 30.png" alt="LinkedIn">
-                </a>
-                <a href="#" class="hover-link">
-                    <img src="./assets/asset 31.png" alt="Youtube">
-                </a>
-            </div>
+            <a href="#" class="hover-link">Privacy policy</a>
+            <a href="#" class="hover-link">Terms & conditions</a>
+            <a href="#" class="hover-link">Security information</a>
+            <a href="#" class="hover-link">
+                <img src="./assets/asset 28.png" alt="Facebook">
+            </a>
+            <a href="#" class="hover-link">
+                <img src="./assets/asset 29.png" alt="Twitter">
+            </a>
+            <a href="#" class="hover-link">
+                <img src="./assets/asset 30.png" alt="LinkedIn">
+            </a>
+            <a href="#" class="hover-link">
+                <img src="./assets/asset 31.png" alt="Youtube">
+            </a>
         </div>
-
     </div>
 
     <script src="https://kit.fontawesome.com/2477b692f8.js" crossorigin="anonymous"></script>
+    <script>
+        const toggleButton = document.getElementById('nav-toggle');
+        const navlinks = document.getElementById('nav-links');
+
+        toggleButton.addEventListener('click', () => {
+            navlinks.classlist.toggle('active');
+        })
+    </script>
 </body>
 
 </html>
